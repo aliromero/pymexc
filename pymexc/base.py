@@ -20,11 +20,11 @@ class MexcSDK(ABC):
     :param api_secret: A string representing the API secret.
     :param base_url: A string representing the base URL of the API.
     """
-    def __init__(self, api_key: str, api_secret: str, base_url: str, proxies: dict = None):
+    def __init__(self, api_key: str, api_secret: str, base_url: str, recv_window=5000, proxies: dict = None):
         self.api_key = api_key
         self.api_secret = api_secret
 
-        self.recvWindow = 5000
+        self.recvWindow = recv_window
 
         self.base_url = base_url
 
